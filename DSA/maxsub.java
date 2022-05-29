@@ -4,6 +4,8 @@ public class maxsub {
 
     public static void main(String[] args) {
 
+        //Input
+
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter size of the array: ");
         int n = sc.nextInt();
@@ -15,6 +17,8 @@ public class maxsub {
         }
         sc.close();
 
+        //Printing the array created
+
         System.out.println("Original Array:");
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
@@ -25,8 +29,8 @@ public class maxsub {
 
     static int max(int n, int arr[]) {
         int max_till_now = Integer.MIN_VALUE;
+        int current_max = 0;
         for (int i = 0; i < n; i++) {
-            int current_max = 0;
             current_max += arr[i];
             if (max_till_now < current_max) {
                 max_till_now = current_max;
