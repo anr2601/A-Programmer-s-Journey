@@ -25,16 +25,28 @@ public class chocolate{
         System.out.println("No. of students: ");
         int m=sc.nextInt();
 
-        System.out.println("The ideal distribution of chocolates would be: "+distribution(n, arr));
+        System.out.println("The ideal distribution of chocolates would be: "+distribution(n, arr, m));
 
     }
 
-    static int distribution(int n, int arr[]){
+    static int distribution(int n, int arr[], int m){
         
         System.out.println("Sorted array: ");
         Arrays.sort(arr);
 
-        return n;
+        if(n<m){
+            return -1;
+        }
+
+        int min = Integer.MAX_VALUE;
+
+        for (int i = 0; i + m - 1 < n; i++)
+        {
+            int diff = arr[i+m-1] - arr[i];
+            if (diff < min)
+                min = diff;
+        }
+        return min;
 
     }
 }
