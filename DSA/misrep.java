@@ -23,13 +23,12 @@ public class misrep{
     Arrays.sort(arr);
 
     for(int i=0;i<5;i++){
-        for(int j=i+1;j<5;j++){
-            if(arr[i]==arr[j]){
-                System.out.println("Repeating Number: "+ arr[i]);
+        if(arr[i]==arr[i+1]){
+            System.out.println("Repeating Number: "+ arr[i]);
                 break;
-            }
         }
-    }
+        
+        }
 
     for(int i=1;i<(4);i++){
         int x=arr[i+1]-1;
