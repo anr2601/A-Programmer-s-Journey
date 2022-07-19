@@ -35,5 +35,7 @@ public class ksmallest {
         int x = k-1;
 
         System.out.println(arr[x]);
+
+        sc.close();
     }
 }
