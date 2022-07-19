@@ -42,6 +42,8 @@ public class klargest{
         int x=n-k;
 
         System.out.print(arr[x]);
+        
+        sc.close();
 
 
     }
