@@ -25,5 +25,7 @@ public class maxmin{
         System.out.println("Max value of array:"+max);
         System.out.println("Min value of array: "+min);
 
+        sc.close();
+
     }
 }
