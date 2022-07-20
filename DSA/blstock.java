@@ -55,6 +55,8 @@ import java.util.*;
 
         System.out.println("Best day to sell the stock: "+max);
 
+        sc.close();
+
     }
  }
 
