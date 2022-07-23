@@ -34,5 +34,7 @@ public class revarr{
             System.out.print(arr[i]+" ");
         }
 
+        sc.close();
+
     }
 }
