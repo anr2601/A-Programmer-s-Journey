@@ -9,7 +9,7 @@ class sort012{
 
 
         int c0=0,c1=0,c2=0;
-        
+
         for(int i=0;i<N;i++){
             arr[i]=sc.nextInt();
             if(arr[i]==0){
@@ -49,7 +49,7 @@ class sort012{
         for(int i=0;i<N;i++){
             System.out.print(arr[i]+" ");
         }
-        
 
+        sc.close();
     }
 }
