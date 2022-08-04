@@ -31,6 +31,7 @@ class rainwater{
 
             }
         }
+        sc.close();
 
         
 
