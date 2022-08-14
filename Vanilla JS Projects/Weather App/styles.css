@@ -24,6 +24,7 @@ body {
 .container {
     width: 100%;
     padding: 150px;
+    backdrop-filter: blur(10px);
 }
 
 input[type="text"] {
