@@ -25,6 +25,7 @@ body {
     width: 100%;
     padding: 150px;
     backdrop-filter: blur(5px);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
 }
 
 input[type="text"] {
