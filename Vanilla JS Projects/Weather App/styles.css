@@ -60,3 +60,8 @@ p{
     font-size: larger;
     font-smooth: 23px;
 }
+
+.container{
+    display:flex;
+    align-items:stretch;
+}
