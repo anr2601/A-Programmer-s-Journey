@@ -11,21 +11,30 @@ body {
 }
 
 .card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      /* Add shadows to create the "card" effect */
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
     border-radius: 5px;
+    position: absolute;
     width: 40%;
-    background-image: url(img_avatar.png);
-    background-size: cover;
-    margin: 100px auto;
+    height: 500px;
+    left: calc(50% - 20%);
+    /* to center the card, position it 50% of page width - half of its own width */
+    top: calc(50% - 250px);
+    /* to center the card, position it 50% of page height - half of its own height */
+     background-image: url(img_avatar.png);
+     background-size: cover;
     align-content: center;
+    overflow: hidden;
 }
 
 .container {
-    width: 100%;
-    padding: 150px;
+    position: absolute;
+    width: 200%;
+    height: 100%;
     backdrop-filter: blur(5px);
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
 }
 
 input[type="text"] {
@@ -34,7 +43,7 @@ input[type="text"] {
     margin: 8px 0;
 }
 
-input[type="submit"] {
+#add {
 
     background-color: blue;
     border: none;
@@ -61,7 +70,12 @@ p{
     font-smooth: 23px;
 }
 
-.container{
-    display:flex;
-    align-items:stretch;
+.entry{
+    width:100%;
+    padding:150px;
+}
+
+.submission{
+    width:100%;
+    padding:150px;
 }
