@@ -42,5 +42,7 @@ class ContainerWithMostWater {
         
         maxArea(height);
     
+        sc.close();
+        
     }
 }
