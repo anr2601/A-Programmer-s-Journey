@@ -80,3 +80,28 @@ p{
     width:100%;
     padding:150px;
 }
+
+.icon{
+    height:100px;
+}
+
+.temp{
+    font-size:40px;
+    color:rgba(255, 255, 255, 0.796);
+    font-weight:10px;
+    font-family:sans-serif;
+}
+
+.summary{
+    font-size:30px;
+    font-family:sans-serif;
+    color:rgba(255, 255, 255, 0.792);
+}
+
+.location{
+    font-size:20px;
+    font-family:sans-serif;
+    color:rgba(255, 255, 255, 0.805);
+}
+
+
