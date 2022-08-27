@@ -34,11 +34,7 @@ window.onload = () => {
             loc.textContent = data.name + "," + data.sys.country;
             let icon1 = data.weather[0].icon;
             icon.style.background = `url("http://openweathermap.org/img/wn/${icon1}@2x.png") no-repeat 0 0`;
-
-            
-
           
-            
           })
 
           .catch((errorResponse) => {
