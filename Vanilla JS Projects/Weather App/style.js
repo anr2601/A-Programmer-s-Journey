@@ -29,9 +29,15 @@ window.onload = () => {
             temperature.textContent = 
                 Math.floor(data.main.temp - kelvin) + " °C | °F";
             summary.textContent = data.weather[0].description;
+
+
             loc.textContent = data.name + "," + data.sys.country;
             let icon1 = data.weather[0].icon;
             icon.style.background = `url("http://openweathermap.org/img/wn/${icon1}@2x.png") no-repeat 0 0`;
+
+            
+
+          
             
           })
 
