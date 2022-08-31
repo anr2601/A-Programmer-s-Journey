@@ -26,7 +26,7 @@ class GivenSumPair{
 
         //Now traversing to find other value
 
-        for(int i:arr){
+        for(int i=0;i<n;i++){
             if(map.containsValue(arr[i])){
                 System.out.println("true");
                 return;
