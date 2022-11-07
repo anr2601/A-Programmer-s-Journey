@@ -9,6 +9,7 @@ import React, { useState } from 'react';
 
 import {
   BrowserRouter as Router,
+  HashRouter,
   Route,
   Routes
 } from "react-router-dom";
@@ -46,6 +47,7 @@ export default function App() {
   return (
     <>
     <Router>
+    <HashRouter basename="/">
       <Navbar title="Text Magic" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className='container my-3'>
@@ -59,6 +61,7 @@ export default function App() {
         </Routes>
         
       </div>
+      </HashRouter>
     </Router>
     </>
   );
