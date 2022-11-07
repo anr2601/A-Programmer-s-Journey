@@ -1,5 +1,6 @@
 {
-  "name": "text-utils",
+  "homepage": "http://anshuman.github.io/gh-pages-app/",
+  "name": "text-magic",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
