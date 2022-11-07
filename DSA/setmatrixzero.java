@@ -85,6 +85,7 @@ public class setmatrixzero {
             System.out.println();
         }
 
+        //Method for Brute Force
         //setZeroes(arr, i, j);
 
         for (int x = 0; x < i; x++) {
