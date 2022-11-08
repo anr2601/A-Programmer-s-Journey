@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.ead1b2b1.js",
-    "static/js/787.468449de.chunk.js": "/static/js/787.468449de.chunk.js",
-    "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.ead1b2b1.js.map": "/static/js/main.ead1b2b1.js.map",
-    "787.468449de.chunk.js.map": "/static/js/787.468449de.chunk.js.map"
+    "main.css": "/A-Programmer-s-Journey/React%20Projects/Text-Magic/build/static/css/main.073c9b0a.css",
+    "main.js": "/A-Programmer-s-Journey/React%20Projects/Text-Magic/build/static/js/main.a93a259a.js",
+    "static/js/787.468449de.chunk.js": "/A-Programmer-s-Journey/React%20Projects/Text-Magic/build/static/js/787.468449de.chunk.js",
+    "index.html": "/A-Programmer-s-Journey/React%20Projects/Text-Magic/build/index.html",
+    "main.073c9b0a.css.map": "/A-Programmer-s-Journey/React%20Projects/Text-Magic/build/static/css/main.073c9b0a.css.map",
+    "main.a93a259a.js.map": "/A-Programmer-s-Journey/React%20Projects/Text-Magic/build/static/js/main.a93a259a.js.map",
+    "787.468449de.chunk.js.map": "/A-Programmer-s-Journey/React%20Projects/Text-Magic/build/static/js/787.468449de.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.ead1b2b1.js"
+    "static/js/main.a93a259a.js"
   ]
 }
