@@ -46,7 +46,7 @@ export default function App() {
 
   return (
     <>
-    <Router basename='https://namelessexplorer.github.io/A-Programmer-s-Journey/React%20Projects/Text-Magic/build/'>
+    <Router basename='/React Projects/Text-Magic/build/'>
       <Navbar title="Text Magic" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className='container my-3'>
