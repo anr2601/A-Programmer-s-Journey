@@ -52,9 +52,10 @@ export default function App() {
       <div className='container my-3'>
         <Routes>
 
+       
           <Route path="/about" element={<About />}>
           </Route>
-          <Route path="/" element={<TextForm showAlert={showAlert} mode={mode} />}> 
+          <Route index="/" element={<TextForm showAlert={showAlert} mode={mode} />}> 
           </Route>
         
         </Routes>
