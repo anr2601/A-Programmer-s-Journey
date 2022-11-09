@@ -46,7 +46,7 @@ export default function App() {
 
   return (
     <>
-    <Router basename=''>
+    <Router basename='A-Programmer-s-Journey/React%20Projects/Text-Magic/build'>
       <Navbar title="Text Magic" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className='container my-3'>
