@@ -6,9 +6,9 @@ import Navbar from './Components/Navbar';
 import News from './Components/News';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route
-} from 'react-router-dom'
+} from 'react-router-dom';
 
 export default class App extends Component {
 
@@ -17,16 +17,16 @@ export default class App extends Component {
       <div>
         <Router>
           <Navbar />
-          <Switch>
-            <Route exact path="/"><News pageSize={5} country='in' category='general' /></Route>
-            <Route exact path="/business"><News pageSize={5} country='in' category='business' /></Route>
-            <Route exact path="/entertainment"><News pageSize={5} country='in' category='entertainment' /></Route>
-            <Route exact path="/general"><News pageSize={5} country='in' category='general' /></Route>
-            <Route exact path="/health"><News pageSize={5} country='in' category='health' /></Route>
-            <Route exact path="/science"><News pageSize={5} country='in' category='science' /></Route>
-            <Route exact path="/sports"><News pageSize={5} country='in' category='sports' /></Route>
-            <Route exact path="/technology"><News pageSize={5} country='in' category='technology' /></Route>
-          </Switch>
+          <Routes>
+            <Route exact path="/" element="<News pageSize={5} country='in' category='general' />"/>
+            <Route exact path="/business" element={<News pageSize={5} country='in' category='business' />} />
+            <Route exact path="/entertainment"element={<News pageSize={5} country='in' category='entertainment' />} />
+            <Route exact path="/general" element={<News pageSize={5} country='in' category='general' />}/>
+            <Route exact path="/health" element={<News pageSize={5} country='in' category='health' />}/>
+            <Route exact path="/science" element={<News pageSize={5} country='in' category='science' />}/>
+            <Route exact path="/sports" element={<News pageSize={5} country='in' category='sports' />}/>
+            <Route exact path="/technology" element={<News pageSize={5} country='in' category='technology' />}/>
+          </Routes>
 
 
 
