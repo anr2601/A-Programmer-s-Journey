@@ -11,19 +11,11 @@ import {
 
 import LoadingBar from 'react-top-loading-bar'
 
-export default class App extends Component {
+const App = () => {
    
-  apiKey = process.env.REACT_APP_NEWS_API2
-  state = {
-    progress: 0
-  }
+  apiKey = process.env.REACT_APP_NEWS_API
+  const [progress, setProgress] =useState(0)
 
-  setProgress = (progress) => {
-    this.setState({ progress: progress })
-  }
-
-
-  render() {
     return (
       <div>
         <Router>
@@ -31,7 +23,7 @@ export default class App extends Component {
           <LoadingBar
             height={3}
             color='#f11946'
-            progress={this.state.progress}
+            progress={progress}
           />
           <Routes>
             <Route exact path="/" element={<News setProgress={this.setProgress} apiKey={this.apiKey} pageSize={5} country='in' category='general' key="general" />} />
@@ -51,4 +43,4 @@ export default class App extends Component {
       </div>
     )
   }
-}
+
