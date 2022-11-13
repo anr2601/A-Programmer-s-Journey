@@ -1,11 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-export default Navbar = () => {
+const Navbar = () => {
 
   
     return(
-    <nav className="navbar navbar-expand-lg bg-light">
+    <nav className="navbar navbar-expand-lg fixed-top bg-light">
     <div className="container-fluid">
     <Link className="navbar-brand" to="/">Navbar</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
@@ -34,3 +34,5 @@ export default Navbar = () => {
 </nav>
   )
 }
+
+export default Navbar
