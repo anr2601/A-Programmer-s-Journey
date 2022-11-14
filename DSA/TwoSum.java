@@ -56,6 +56,8 @@ class Solution {
         int target=sc.nextInt();
        
         twoSum(nums,target);
+
+        sc.close();
         
     }
 } 
