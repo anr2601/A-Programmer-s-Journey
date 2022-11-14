@@ -17,39 +17,25 @@ Constraints:
 
 import java.util.*;
 
-class TwoSum {
+class Solution {
     
     public static int[] twoSum(int[] nums, int target) {
         
-        int x=0;
-        int y=1;
-        int a=0;
-        int b=0;
         
         int n=nums.length;
+        int arr[] = new int[2];
         
         HashMap<Integer,Integer>map=new HashMap<Integer,Integer>();
         for(int i=0;i<n;i++){
-            x=target-nums[i];
-            map.put(y,x);
-            y++;
-        }
-        
-        for(int i=0;i<n;i++){
-            if(map.containsValue(nums[i])){
-                a=i;
-                x=target-nums[i];
+            if(map.containsKey(target-nums[i])){
+                arr[1] = i;
+                arr[0] = map.get(target-nums[i]);
+                return arr;
             }
-            
+            map.put(nums[i], i);
         }
         
-        for(int i=0;i<n;i++){
-            if(x==nums[i]){
-                b=i;
-            }
-        }
         
-        int[] arr={a,b};
         return arr;
     }
     
@@ -70,8 +56,6 @@ class TwoSum {
         int target=sc.nextInt();
        
         twoSum(nums,target);
-
-        sc.close();
         
     }
-}
+} 
