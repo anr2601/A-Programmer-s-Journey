@@ -43,6 +43,7 @@ const News = (props) =>{
     setArticles(articles.concat(parseddata.articles))
     setTotalResults(parseddata.totalResults)
 
+    console.log(url)
   }
 
     return (
