@@ -1,8 +1,8 @@
-import java.util.LinkedList;
+import java.util.*;
 
 public class QStack {
 
-        Queue <Integer> q = new LinkedList <> ();
+        PriorityQueue <Integer> q = new PriorityQueue <> ();
         public QStack() {
             
         }
