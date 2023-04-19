@@ -16,16 +16,17 @@ public class nge {
         int nge[] = new int[n];
 
         Stack<Integer> st = new Stack<>();
-        for(int i=(2*n-1);i>=0;i--){
-            while((st.empty()==false) && (st.peek()<arr[i%n])){
+        
+        for(int i=2*n-1;i>=0;i--){
+            while((st.empty()==false) && (arr[st.peek()]<=arr[i%n])){
                 st.pop();
             }
             if(i<n){
-                if(st.empty()==false){
-                    nge[i] = st.peek();
+                if(st.isEmpty()==false){
+                    nge[i%n] = arr[st.peek()];
                 }
                 else{
-                    nge[i] = -1;
+                    nge[i%n] = -1;
                 }
             }
             st.push(i%n);
