@@ -2,13 +2,18 @@ import java.util.*;
 
 public class nge {
 
+//Question to find the next greater element
     public static void main(String args[]){
         int arr[] = {5,7,1,2,6,0};
         int results[] = nextGreaterElements(arr);
-        System.out.println(" Next Greater Elements: ");
+        System.out.println();
+        System.out.println(" Next Greater Elements are: ");
         for(int i=0;i<results.length;i++){
+
             System.out.print(results[i]+" ");
+        
         }
+        System.out.println();
     }
 
     public static int[] nextGreaterElements(int[] arr){
