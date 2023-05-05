@@ -1,32 +1,20 @@
-class reversestr{
+//Reversing words in a string
+
+class Solution {
     public String reverseWords(String s) {
         
-        s+=" ";
-        
-        Stack<String> st = new Stack<String>();
-        int i;
-        String str = "";
-        
-        for (i = 0;i < s.length();i++)
-        {
-            if (s.charAt(i) == ' ')
-            {
-                st.push(str);
-                str = "";
-            }
-            else
-            {
-                str += s.charAt(i);
-            }
-        }
+        String s1[] = s.trim().split("\\s+");
         String ans = "";
-        
-        while (st.size() != 1)
-        {
-            ans += st.peek() + " ";
-            st.pop();
+        for(int i = s1.length-1;i>=0;i--){
+            if(s1[i]==" "){
+                continue;
+            }
+            else{
+                ans+=s1[i]+" ";
+            }
+            
         }
-        ans += st.peek(); // The last word should'nt have a space after it
+        ans = ans.substring(0,ans.length()-1);
         return ans;
 }
-}
+} 
