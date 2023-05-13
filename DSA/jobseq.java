@@ -32,12 +32,14 @@ public class jobseq {
 
         for (int i = 0; i < n; i++) {
             for (int j = arr[i].deadline; j > 0; j--) {
+
                 if (result[j] == -1) {
                     result[j] = i;
                     count += 1;
                     profit += arr[i].profit;
                     break;
                 }
+                
             }
         }
 
