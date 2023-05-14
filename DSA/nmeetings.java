@@ -1,68 +1,65 @@
 import java.util.*;
 
-class meetings{
-    int start;
-    int end;
-    int pos;
+class meeting {
+    int start, pos, end;
 
-    meetings(int start, int end, int pos){
+    meeting(int start, int pos, int end) {
         this.start = start;
-        this.end = end;
         this.pos = pos;
+        this.end = end;
     }
 }
 
-class meetingComparator implements Comparator<meetings>{
+class meetingComparator implements Comparator<meeting> {
 
     @Override
-    public int compare(meetings o1, meetings o2){
-        if(o1.end < o2.end){
-            return -1;
-        }
-        else if(o1.end > o2.end){
-            return 1;
-        }
-        else if(o1.pos<o2.pos){
-            return -1;
-        }
-        else{
-            return 1;
-        }
-    }
+    public int compare(meeting a, meeting b) {
 
+        if (a.end < b.end)
+            return -1;
+        else if (a.end > b.end)
+            return 1;
+        else if (a.pos < b.pos)
+            return -1;
+
+        return 1;
+    }
 }
 
-public class nmeetings{
-     static void maxMeetings(int[] start, int[] end){
+public class nmeetings {
+    public static void meetings(int n, int start[], int end[]) {
 
-        ArrayList<meetings> meet = new ArrayList<>();
-        for(int i=0;i<start.length;i++){
-            meet.add(new meetings(start[i],end[i],i+1));
+        ArrayList<meeting> al = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+            al.add(new meeting(start[i], i + 1, end[i]));
         }
-        
-        meetingComparator mc = new meetingComparator();
-        Collections.sort(meet,mc);
-        
-        ArrayList<Integer> answer = new ArrayList<>();
-        answer.add(meet.get(0).pos);
-        int limit = meet.get(0).end;
+        Collections.sort(al, new meetingComparator());
 
-        for(int i=1;i<start.length;i++){
-            if(meet.get(i).start>limit){
-                answer.add(meet.get(i).pos);
-                limit = meet.get(i).end;
+        ArrayList<Integer> answer = new ArrayList<>();
+
+        answer.add(al.get(0).pos);
+        int limit = al.get(0).end;
+
+        for (int i = 1; i < start.length; i++) {
+            if (al.get(i).start > limit) {
+                limit = al.get(i).end;
+                answer.add(al.get(i).pos);
             }
         }
 
-        System.out.println("Order of performing meetings: ");
-        for(int i=0;i<answer.size();i++){
-            System.out.print(answer.get(i)+" ");
+        System.out.println("Maximum no. of meetings possible: ");
+        for (int i = 0; i < answer.size(); i++) {
+            System.out.print(answer.get(i) + " ");
         }
-     }
 
-     public static void main(String args[]){
-        int[] start = {1,3,0,5,8,5};
-        int[] end = {2,4,5,7,9,9};
-        maxMeetings(start, end);
-     }
+    }
+
+    public static void main(String[] args) {
+        int n = 6;
+        int start[] = { 1, 3, 0, 5, 8, 5 };
+        int end[] = { 2, 4, 5, 7, 9, 9 };
+
+        meetings(n, start, end);
+    }
 }
