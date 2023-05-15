@@ -4,9 +4,10 @@ class meeting {
     int start, pos, end;
 
     meeting(int start, int pos, int end) {
-        this.start = start;
+        
         this.pos = pos;
         this.end = end;
+        this.start = start;
     }
 }
 
