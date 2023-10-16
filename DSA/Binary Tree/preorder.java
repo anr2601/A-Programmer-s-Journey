@@ -9,15 +9,17 @@ public class preorder {
         if(root == null){
             return;
         }
+
         System.out.println(root.val);
         dfs(root.left);
         dfs(root.right);
     }
 
-
     private static List<Integer> preordIntegers(TreeNode root){
+        
         dfs(root);
         return answer;
+
     }
 
     public static void main(String[] args) {

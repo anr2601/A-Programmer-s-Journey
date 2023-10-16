@@ -2,43 +2,54 @@ import java.util.*;
 
 public class maxsub {
 
-    public static void main(String[] args) {
-
-        //Input
+    public static void main(String args[]){
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter size of the array: ");
+        
         int n = sc.nextInt();
         int[] arr = new int[n];
-
-        System.out.println("Enter values for the array: ");
-        for (int i = 0; i < n; i++) {
+        for(int i=0;i<n;i++){
             arr[i] = sc.nextInt();
         }
+
+        int max = maxsubarray(arr);
+
+        System.out.println(max);
         sc.close();
-
-        //Printing the array created
-
-        System.out.println("Original Array:");
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
-        System.out.println("Sum of largest contiguous subarray:"+ max(n, arr));
     }
 
-    static int max(int n, int arr[]) {
-        int max_till_now = Integer.MIN_VALUE;
-        int current_max = 0;
-        for (int i = 0; i < n; i++) {
-            current_max += arr[i];
-            if (max_till_now < current_max) {
-                max_till_now = current_max;
+    public static int maxsubarray(int[] arr){
+
+        int sum = Integer.MIN_VALUE;
+        int maxi = 0;
+        int start = 0;
+        int starti = -1;
+        int end = -1;
+
+        for(int i=0;i<arr.length;i++){
+            
+            if(sum==0) start = i;
+
+            sum+=arr[i];
+
+            if(sum>maxi){
+                maxi = sum;
+                starti = start;
+                end = i;
             }
-            if (current_max < 0) {
-                current_max = 0;
+            
+
+
+            if(sum<0){
+                sum = 0;
             }
+
         }
-        return max_till_now;
+
+        for(int i = starti;i<=end;i++){
+            System.out.print(arr[i]+" ");
+        }
+
+        return maxi;
     }
 }
